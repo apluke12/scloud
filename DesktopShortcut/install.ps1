@@ -1,4 +1,4 @@
-﻿$PackageName = "DesktopIcon_SLZ"
+﻿$PackageName = "ManagerDesktopShortcuts"
 $Version = "1"
 
 $Path_local = "$Env:Programfiles\MEM"

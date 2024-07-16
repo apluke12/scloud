@@ -1,4 +1,4 @@
-﻿$PackageName = "DesktopIcon_SLZ"
+﻿$PackageName = "ManagerDesktopShortcuts"
 
 $Path_local = "$Env:Programfiles\MEM"
 Start-Transcript -Path "$env:ProgramData\Microsoft\IntuneManagementExtension\Logs\$PackageName-uninstall.log" -Force
