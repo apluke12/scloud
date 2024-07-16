@@ -21,9 +21,13 @@ foreach($OLD_Item in $OLD_Items){
 Remove-Item "$DesktopTMP\*" -Force
 Remove-Item "$DesktopIcons\*" -Force
 
-# shortcuts from list
-$shortcuts = Import-CSV "link-list.csv"
-foreach($shortcut in $shortcuts){
+# Copy New shortcuts
+# Copy-Item -Path ".\Desktop\*" -Destination $DesktopTMP -Recurse
+Copy-Item -Path ".\icons\*" -Destination $DesktopIcons -Recurse
+
+ shortcuts from list
+ $shortcuts = Import-CSV "link-list.csv"
+ foreach($shortcut in $shortcuts){
     $WshShell = New-Object -comObject WScript.Shell
     $Shortcut_file = $WshShell.CreateShortcut("$DesktopTMP\$($shortcut.name).lnk")
     $Shortcut_file.TargetPath = $shortcut.link
